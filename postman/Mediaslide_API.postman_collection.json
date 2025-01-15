@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "687ee26d-20d4-459b-87eb-0cb2fa71901b",
+		"name": "Mediaslide test",
+		"description": "**Mediaslide API Test Collection**\n\nThis Postman collection is designed to test the endpoints of the **Mediaslide TEST API**, ensuring compliance with the application's requirements and expected behavior. It covers the following functionalities:\n\n1. **Model Management**\n2. **Category Management**\n3. **Booking Management**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2620126"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Men\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}categories",
+							"host": [
+								"{{host}}categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}categories",
+							"host": [
+								"{{host}}categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read one",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}categories/1",
+							"host": [
+								"{{host}}categories"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Full update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Women\",\n    \"parent_id\" : 2\n}"
+						},
+						"url": {
+							"raw": "{{host}}categories/1",
+							"host": [
+								"{{host}}categories"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}categories/1",
+							"host": [
+								"{{host}}categories"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Model",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Stan Smith\",\n    \"description\": \"The best can be the worst\",\n    \"date_of_birth\": \"1990-01-01\",\n    \"height\": 180,\n    \"shoe_size\": \"42\",\n    \"category_id\": 1,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}models",
+							"host": [
+								"{{host}}models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}models",
+							"host": [
+								"{{host}}models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read one",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}models/1",
+							"host": [
+								"{{host}}models"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Full update Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Brad Pitt\",\n    \"description\": \"Very famous actor\",\n    \"date_of_birth\": \"1970-02-01\",\n    \"height\": 185,\n    \"shoe_size\": \"43\",\n    \"category_id\": 3,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}models/1",
+							"host": [
+								"{{host}}models"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}models/1",
+							"host": [
+								"{{host}}models"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Stan Smith\",\n    \"description\": \"The best can be the worst\",\n    \"date_of_birth\": \"1990-01-01\",\n    \"height\": 180,\n    \"shoe_size\": \"42\",\n    \"category_id\": 1,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}models",
+							"host": [
+								"{{host}}models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read all",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}models",
+							"host": [
+								"{{host}}models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read one Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}models/1",
+							"host": [
+								"{{host}}models"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Full update Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Brad Pitt\",\n    \"description\": \"Very famous actor\",\n    \"date_of_birth\": \"1970-02-01\",\n    \"height\": 185,\n    \"shoe_size\": \"43\",\n    \"category_id\": 3,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}models/1",
+							"host": [
+								"{{host}}models"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}models/1",
+							"host": [
+								"{{host}}models"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
