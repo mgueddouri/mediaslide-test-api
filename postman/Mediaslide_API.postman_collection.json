@@ -139,7 +139,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Stan Smith\",\n    \"description\": \"The best can be the worst\",\n    \"date_of_birth\": \"1990-01-01\",\n    \"height\": 180,\n    \"shoe_size\": \"42\",\n    \"category_id\": 1,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
+							"raw": "{\n    \"name\": \"Martine Alaplage\",\n    \"description\": \"The best can be the worst\",\n    \"date_of_birth\": \"2002-01-01\",\n    \"height\": 175,\n    \"shoe_size\": \"37\",\n    \"category_id\": 5,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}models",
@@ -192,7 +192,7 @@
 					"response": []
 				},
 				{
-					"name": "Full update Copy",
+					"name": "Full update",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -256,12 +256,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Stan Smith\",\n    \"description\": \"The best can be the worst\",\n    \"date_of_birth\": \"1990-01-01\",\n    \"height\": 180,\n    \"shoe_size\": \"42\",\n    \"category_id\": 1,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
+							"raw": "{\n    \"customer_name\": \"Fashion Week\",\n    \"booking_date\": \"2025-02-01\",\n    \"models\": [2,3]\n}"
 						},
 						"url": {
-							"raw": "{{host}}models",
+							"raw": "{{host}}bookings",
 							"host": [
-								"{{host}}models"
+								"{{host}}bookings"
 							]
 						}
 					},
@@ -278,16 +278,16 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}models",
+							"raw": "{{host}}bookings",
 							"host": [
-								"{{host}}models"
+								"{{host}}bookings"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Read one Copy",
+					"name": "Read one",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -297,9 +297,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}models/1",
+							"raw": "{{host}}bookings/1",
 							"host": [
-								"{{host}}models"
+								"{{host}}bookings"
 							],
 							"path": [
 								"1"
@@ -309,7 +309,7 @@
 					"response": []
 				},
 				{
-					"name": "Full update Copy 2",
+					"name": "Full update",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -320,12 +320,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Brad Pitt\",\n    \"description\": \"Very famous actor\",\n    \"date_of_birth\": \"1970-02-01\",\n    \"height\": 185,\n    \"shoe_size\": \"43\",\n    \"category_id\": 3,\n    \"picture\": \"https://example.com/picture.jpg\"\n}"
+							"raw": "{\n    \"customer_name\": \"Fashion Week\",\n    \"booking_date\": \"2025-02-02\",\n    \"models\": [2]\n}"
 						},
 						"url": {
-							"raw": "{{host}}models/1",
+							"raw": "{{host}}bookings/1",
 							"host": [
-								"{{host}}models"
+								"{{host}}bookings"
 							],
 							"path": [
 								"1"
@@ -335,7 +335,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete Copy",
+					"name": "Delete",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -345,9 +345,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}models/1",
+							"raw": "{{host}}bookings/1",
 							"host": [
-								"{{host}}models"
+								"{{host}}bookings"
 							],
 							"path": [
 								"1"
